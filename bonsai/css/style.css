@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(to right, #071522, #102e46);
+  overflow-x: hidden;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.navbar a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+.navbar ul li a:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  -webkit-transform: translateX(-50%) scaleX(0);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.navbar ul li a:hover:after {
+  transform: translateX(-50%) scaleX(1);
+  -webkit-transform: translateX(-50%) scaleX(1);
+}
+#menu-btn {
+  display: none;
+  color: #fff;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+.menu ul {
+  display: flex;
+  align-items: center;
+}
+.menu li {
+  padding: 0 20px;
+  list-style: none;
+}
+.menu li a {
+  font-weight: 300;
+}
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+#main,
+#bonsai {
+  display: flex;
+  justify-content: space-between;
+}
+#main .content,
+#bonsai .content02 {
+  color: #fff;
+  margin-top: 100px;
+  width: 50%;
+}
+#main .content h1,
+#about .content h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+}
+#main .content p,
+#bonsai .content02 p {
+  font-weight: 200;
+}
+#main a,
+#bonsai a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+}
+#main .btn-main,
+#bonsai .btn-main {
+  padding: 10px 20px;
+  background: rgb(107, 107, 107);
+  transition: all 0.5s ease-in-out;
+}
+#main .btn-main:hover,
+#bonsai .btn-main:hover,
+#plants .btn-main:hover,
+#products .btn-main:hover,
+#about .btn-main:hover {
+  opacity: 0.7;
+}
+#main .white {
+  position: relative;
+  background: rgb(107, 107, 107);
+  width: 500px;
+  height: 500px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+#main .white .picture {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#main .white h1 {
+  font-size: 5rem;
+  transform: rotate(90deg);
+  color: #102e46;
+  margin: 0;
+  opacity: 0.5;
+}
+#bonsai .background {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background: rgb(107, 107, 107);
+  margin-top: 300px;
+}
+#bonsai .background .picture02 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+}
+#bonsai .background .picture02 img {
+  width: 100%;
+}
+#bonsai .content02 {
+  width: 60%;
+}
+#bonsai .background h1 {
+  font-size: 5rem;
+  color: #102e46;
+  margin: 0;
+  opacity: 0.5;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+#bonsai {
+  padding-bottom: 50px;
+}
+#plants {
+  background: rgb(107, 107, 107);
+}
+#plants .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#plants .background .img {
+  width: 400px;
+}
+#plants .background .img img {
+  width: 100%;
+}
+#plants .background {
+  margin-top: -90px;
+  background: rgb(107, 107, 107);
+  padding: 20px;
+}
+#plants .container .content {
+  padding-right: 50px;
+}
+#plants .container .content h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+#plants .container .content p {
+  font-weight: 300;
+}
+#plants .btn-main {
+  background: #071522;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+#products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  text-align: center;
+  padding: 40px;
+}
+#products div {
+  height: 400px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+#products div:first-child {
+  background: url("../img/card01.jpg") no-repeat center center/cover;
+}
+#products div:nth-child(2) {
+  background: url("../img/card02.jpg") no-repeat center center/cover;
+}
+#products div:nth-child(3) {
+  background: url("../img/card03.jpg") no-repeat center center/cover;
+}
+#products div .btn-main {
+  padding: 10px 20px;
+  background: #071522;
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  position: absolute;
+  bottom: -25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: #fff 1px solid;
+  font-weight: 300;
+}
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#about .content {
+  width: 60%;
+  padding: 0 60px;
+  background: rgb(107, 107, 107);
+  position: relative;
+}
+#about .img {
+  position: relative;
+  width: 700px;
+  margin-left: -50px;
+}
+#about .img img {
+  width: 100%;
+}
+#about .btn-main {
+  background: #071522;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  right: -70px;
+  position: absolute;
+  bottom: -10px;
+  border: #fff 1px solid;
+  transition: all 0.5s ease-in-out;
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+}
+.footer h3 {
+  margin: 0;
+}
+.footer .contact {
+  width: 80%;
+  text-align: center;
+  background: rgb(107, 107, 107);
+  margin-bottom: 20px;
+  height: 150px;
+  margin-right: -50px;
+}
+.footer .socials {
+  background: #fff;
+  width: 20%;
+  height: 90px;
+  text-align: center;
+}
+.footer .socials a {
+  color: #071522;
+}
+@media (max-width: 1200px) {
+  #main .white {
+    display: none;
+  }
+  #main .content {
+    width: 100%;
+    margin-top: 10px;
+  }
+  #bonsai {
+    flex-direction: column;
+    align-items: center;
+  }
+  #bonsai .content02 {
+    width: 100%;
+    margin: 0;
+  }
+  #plants {
+    height: auto;
+  }
+  #plants .content {
+    margin-bottom: 20px;
+  }
+  #about {
+    flex-direction: column;
+    align-items: center;
+  }
+  #about .content {
+    width: 80%;
+    padding: 0 20px;
+  }
+  #about .btn-main {
+    right: 50%;
+    z-index: 2;
+    transform: translateX(50%);
+  }
+  #about .img {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .navbar {
+    position: relative;
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    transform: translateY(-500px);
+    background: #071522;
+    width: 100%;
+    top: 60px;
+    text-align: center;
+    padding: 20px 0;
+    transition: transform 0.2s ease-in-out;
+  }
+  .show {
+    transform: translateY(0px);
+  }
+  .menu ul li {
+    padding: 10px 0;
+  }
+  #menu-btn {
+    display: block;
+    cursor: pointer;
+  }
+  #bonsai .background {
+    margin-top: 350px;
+  }
+  #plants .background .img {
+    width: 300px;
+  }
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .contact {
+    margin: 0;
+  }
+  .footer .socials {
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  #bonsai .background .picture02 {
+    width: 400px;
+  }
+  #bonsai .background {
+    margin-top: 200px;
+  }
+  #plants .background {
+    display: none;
+  }
+  #products {
+    grid-template-columns: 1fr;
+  }
+  .footer .socials {
+    width: 400px;
+  }
+  .footer {
+    margin-bottom: 20px;
+  }
+}
